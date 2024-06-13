@@ -11,8 +11,8 @@ let employeesArray = []
 while (addEmployees) {
 let firstName = prompt("What is the employee's first name?")
 let lastName = prompt("What is the employee's last name?")
-let salary = prompt("What is the employee's salary?")
-
+let employeeSalary = prompt("What is the employee's salary?")
+let salary = Number(employeeSalary)
 
 
 let employee = {
