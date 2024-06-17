@@ -1,26 +1,35 @@
-// Get a reference to the #add-employees-btn element
+  // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
+  // when clicked displays prompts to add employees
 
-
-// Collect employee data
+  // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
+  // TODO: Get user input to create and return an 
+  //array of employee objects
+
+  // makes an employees array
+
 let addEmployees = true
 let employeesArray = []
+
+  // while loop allows user to add employees 
+  //to employees array via prompts
 
 while (addEmployees) {
 let firstName = prompt("What is the employee's first name?")
 let lastName = prompt("What is the employee's last name?")
 let employeeSalary = prompt("What is the employee's salary?")
 let salary = Number(employeeSalary)
+
+//checks if salary is not a number, if true alert shows Not a Number!
 if (isNaN(salary)) {
       alert("Not a Number!")
       return 'Not a Number!';
-     
     }
 else {}
 console.log(salary)
   
+// organizes employee data to push into array
 
 let employee = {
   firstName: firstName, 
@@ -28,6 +37,10 @@ let employee = {
   salary: salary,
 
 }
+
+
+// pushes employee into array
+
 employeesArray.push(employee)
 addEmployees = confirm("Would you like to add another employee?")
 }
@@ -35,16 +48,6 @@ return employeesArray
 
 }
 
-// function salary() {
-//   if (isNaN(x)) {
-//     return 'Not a Number!';
-//   }
-
-
-// }
-
-// console.log(salary(x));
-// // Expected output: "Not a Number!"
 
 
 // Display the average salary
@@ -53,18 +56,23 @@ const displayAverageSalary = function(employeesArray) {
   let totalSalary = 0;
 for (let i = 0; i < employeesArray.length; i++) {
   const employee = employeesArray[i];
-  totalSalary += employee.salary 
+  totalSalary += employee.salary ;
   
 }
 
 console.log("Average Employee Salary: $"+ totalSalary/employeesArray.length)
-
 }
+
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+randomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)];
+console.log("Congrats "+ randomEmployee.firstName, randomEmployee.lastName+ "! You've won the drawing!")
+return randomEmployee
 }
+
+
 
 /*
   ====================
