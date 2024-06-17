@@ -13,7 +13,14 @@ let firstName = prompt("What is the employee's first name?")
 let lastName = prompt("What is the employee's last name?")
 let employeeSalary = prompt("What is the employee's salary?")
 let salary = Number(employeeSalary)
-
+if (isNaN(salary)) {
+      alert("Not a Number!")
+      return 'Not a Number!';
+     
+    }
+else {}
+console.log(salary)
+  
 
 let employee = {
   firstName: firstName, 
@@ -27,6 +34,17 @@ addEmployees = confirm("Would you like to add another employee?")
 return employeesArray
 
 }
+
+// function salary() {
+//   if (isNaN(x)) {
+//     return 'Not a Number!';
+//   }
+
+
+// }
+
+// console.log(salary(x));
+// // Expected output: "Not a Number!"
 
 
 // Display the average salary
